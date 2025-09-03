@@ -16,15 +16,16 @@ mongoose.connection.on("connected", ()=> {
 
 const PORT = process.env.PORT
 
-//start server
-app.listen(PORT, ()=>{
-    console.log(`Listening on port ${PORT}`)
-})
-
 //import model
 const Fruit = require(`./models/fruit.js`)
 
 //Routes
 app.get(`/`,(req,res)=> {
-    res.send("Hello, friend!")
+    res.render("index.ejs")
 })
+
+//start server
+app.listen(PORT, ()=>{
+    console.log(`Listening on port ${PORT}`)
+})
+

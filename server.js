@@ -24,6 +24,10 @@ app.get(`/`,(req,res)=> {
     res.render("index.ejs")
 })
 
+app.get(`/fruits/new`,(req,res)=> {
+    res.render("new.ejs")
+})
+
 //start server
 app.listen(PORT, ()=>{
     console.log(`Listening on port ${PORT}`)
